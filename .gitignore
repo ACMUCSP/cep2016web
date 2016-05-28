@@ -3,3 +3,4 @@ __pycache__
 cep_2016_oui
 db.sqlite3
 .DS_Store
+.idea
