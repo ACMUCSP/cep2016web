@@ -5,4 +5,3 @@ urlpatterns = [
     url(r'^$', views.index, name='register'),
     url(r'^contact/?$', views.contact, name='contact')
 ]
-

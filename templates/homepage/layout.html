@@ -71,7 +71,6 @@
     <!-- BOOTSTRAP CSS -->
     <!-- bootstrap can be added from local or cdn, bellow line is for local, btw, there is js which is added in footer -->
         {% load staticfiles %}
-
         <link rel="stylesheet" href="{% static "web_cep_2016/css/bootstrap.min.css"%}" media="all" />
         <!-- to add bootstrap from cdn pls uncomment the bellow line -->
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
@@ -136,11 +135,11 @@
                                     <ul class="nav navbar-nav cbx-nav-right xs-text-center">
                                         <li><a href="#cbx-speakers" class="gotome">Inicio</a></li>
                                         <li><a href="#cbx-venue" class="gotome">Nosotros</a></li>
-                                        <li><a href="#cbx-schedule" class="gotome">Registro</a></li>
-                                        <li><a href="#cbx-travelinfo" class="gotome">Sponsors</a></li>
+                                        <li><a href="#cbx-subscriber" class="gotome">Registro</a></li>
+                                        <li><a href="#cbx-sponsored" class="gotome">Sponsors</a></li>
                                         <li><a href="#cbx-sponsored" class="gotome">Ubicación</a></li>
-                                        <li><a href="#cbx-register" class="gotome">Contacto</a></li>
-                                        <li><a href="contact.html" class="gotome">Archivo</a></li>
+                                        <li><a href="#contacto" class="gotome">Contacto</a></li>
+                                        <li><a href="{% url 'contact' %}" class="gotome">Archivo</a></li>
                                     </ul>
                                     <ul class="list-inline pull-right event-ticket">
                                         <li><a href="#cbx-register">APRENDE AQUI</a></li>
@@ -159,7 +158,7 @@
 
     <!--CONTACT START-->
     <section>
-        <div id="cbx-subscriber" class="cbx-subscriber">
+        <div id="contacto" class="cbx-subscriber">
             <div class="cbx-testi-inner">
                 <div class="container">
                     <div class="row">
@@ -242,20 +241,20 @@
             </div> <!--//.cbx-inner-->
         </div> <!--//.CBX FOOTER-->
     </footer>
-<!-- SITE  SCRIPT  -->
-<script src="/ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
+<!-- SITE  SCRIPT
+  <script src="/ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+-->
 <!-- BOOTSTRAP JS -->
 <!-- adding bootstrap js -->
 {% load staticfiles %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="{% static "web_cep_2016/js/bootstrap.min.js"%}"></script>  <!-- from local -->
 <!-- load bootstrap js from cdn, uncomment bellow line if need from cdn -->
 <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script-->
 
 <!-- if load google maps then load this api -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
 <!-- WOW  JS -->
 <script src="{% static "web_cep_2016/js/wow.js"%}"></script>
 
@@ -270,6 +269,7 @@
 <!-- if use countdown plugin then use this plugin -->
 <script type="text/javascript" src="{% static "web_cep_2016/js/kinetic-v5.1.0.min.js"%}"></script>
 <script type="text/javascript" src="{% static "web_cep_2016/js/jquery.final-countdown.js" %}"></script>
+
 
 <!-- CUSTOM JS -->
 <script src="{% static "web_cep_2016/js/cbscript.js" %}"></script>
