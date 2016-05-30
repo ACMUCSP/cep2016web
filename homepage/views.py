@@ -21,7 +21,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,'homepage/success.html', {'msg2':form.data['name']+' tu mensaje ha sido enviado','form':formu})
+            return render(request,'homepage/success.html', {'msg2':form.data['name']+', tu mensaje ha sido enviado','form':formu})
     else:
         form = ContactForm()
     return render(request, 'homepage/success.html', {'form': formu, 'form2': form})

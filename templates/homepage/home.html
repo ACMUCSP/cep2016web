@@ -396,7 +396,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
-                            <h3 class=" wow fadeInUp" data-wow-delay=".1s">Registro</h3>
+                            <div class="cbx-heading">
+                                <h2 class="uppercase wow fadeInUp" data-wow-delay=".1s">
+                                    <span class="heading-serial">
+                                        <span class="heading-serial-inner">
+                                          04
+                                        </span>
+                                    </span>
+                                    <span class="title">Registro</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <p>Inicio de inscripciones: Lunes 5 de septiembre</p>
+                            <p>Fin de inscripciones: Viernes 30 de septiembre</p>
                         </div> <!--//main COL-->
                     </div> <!--// row-->
                     <div class="row">
@@ -407,32 +420,32 @@
                                 <form class="subscribe-form" role="form" method="post" action="#cbx-register">{% csrf_token %}<!--como para hacer scroll-->
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.name.errors}}</strong>
-                                        {{ form.name|attr:"placeholder:Name"|add_class:"form-control"}}
+                                        {{ form.name|attr:"placeholder:Name"|add_class:"form-control"|attr:"disabled"}}
                                     </div>
-                                    <div class="form-group">                                        {{ form.dni.errors }}
+                                    <div class="form-group">
                                         <strong class="text-muted">{{form.last_name.errors}}</strong>
-                                        {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"}}
+                                        {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"|attr:"disabled"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.dni.errors}}</strong>
-                                        {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
+                                        {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"|attr:"disabled"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.school_name.errors}}</strong>
-                                        {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
+                                        {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"|attr:"disabled"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.email.errors}}</strong>
-                                        {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
+                                        {{ form.email|attr:"placeholder:Email"|add_class:"form-control"|attr:"disabled"}}
                                     </div>
 
                                     <div class="form-group">
                                         {{ form.year_in_school.errors}}
-                                        {{ form.year_in_school|add_class:"form-control"}}
+                                        {{ form.year_in_school|add_class:"form-control"|attr:"disabled"}}
                                     </div>
 
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".4s">
-                                        <button class="cbx-submit lz-submit-btn" name="cbx-submit" type="submit">Enviar</button>
+                                        <button class="cbx-submit lz-submit-btn" name="cbx-submit" type="submit" disabled>Enviar</button>
                                     </div>
                                 </form>
                                 {% else %}
@@ -462,7 +475,7 @@
                                 <h2 class="uppercase wow fadeInUp" data-wow-delay=".1s">
                                     <span class="heading-serial">
                                         <span class="heading-serial-inner">
-                                          07
+                                          05
                                         </span>
                                     </span>
                                     <span class="title">Testimonios</span>

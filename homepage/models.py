@@ -32,6 +32,7 @@ class Contact(models.Model):
     email = models.CharField(max_length=200,
                              validators=[RegexValidator(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")])
     message = models.TextField()
+
     def __str__(self):#representacion en string del objeto
         return self.name
 

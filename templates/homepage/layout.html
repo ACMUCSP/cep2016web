@@ -1,4 +1,5 @@
 {% load widget_tweaks %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -164,27 +165,38 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
+                            <div class="cbx-heading">
+                                <h2 class="uppercase wow fadeInUp" data-wow-delay=".1s">
+                                    <span class="heading-serial">
+                                        <span class="heading-serial-inner">
+                                          06
+                                        </span>
+                                    </span>
+                                    <span class="title">Contacto</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <!--<div class="col-xs-12 text-center">
                             <h3 class=" wow fadeInUp" data-wow-delay=".1s">Contacto</h3>
-                        </div> <!--//main COL-->
+                        </div> <!--//main COL-->-->
                     </div> <!--// row-->
                     <div class="row">
                         <div class="col-xs-12  col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-
                             <div class="cbx-subscriber text-center">
                                 {{ form2.non_field_errors }}
                                 {% if form2 %}
                                 <form class="subscribe-form" role="form" method="post" action="{% url "contact" %}">{% csrf_token %}
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <strong class="text-muted">{{ form2.name.errors}}</strong>
                                         {{ form2.name|attr:"placeholder:Nombre"|add_class:"form-control lz-input form-control"|attr:"required=required"}}
+                                        {{ form2.name.errors}}
                                     </div>
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <strong class="text-muted">{{ form2.email.errors}}</strong>
                                         {{ form2.email|attr:"placeholder:Ingresa tu email ..."|add_class:"form-control lz-input form-control"|attr:"required=required"}}
+                                        {{ form2.email.errors}}
                                     </div>
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <strong class="text-muted">{{ form2.name.errors}}</strong>
                                         {{ form2.message|attr:"placeholder:Escribe tu mensaje ..."|add_class:"form-control lz-input form-control"|attr:"required=required"}}
+                                        {{ form2.message.errors}}
                                     </div>
                                     <!--<div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
                                         <input id="subscribe"  class="form-control lz-input form-control" required="required" type="email" placeholder="Ingresa tu email...">
@@ -196,12 +208,13 @@
                                 {% else %}
                                     <blockquote>
                                         <p class="text-primary">{{ msg2 }}</p>
-                                        <footer class="text-success">Te responderemos <cite class="text-success" title="Source Title">my pronto.</cite></footer>
+                                        <footer class="text-success">Te responderemos my pronto.</footer>
+                                        <div class="col-xs-12" style="height:50px;"></div>
                                         <a href="{% url "register" %}" class="btn btn-primary btn-lg active" role="button">Ir a página principal</a>
                                     </blockquote>
-
                                 {% endif %}
-                            </div> <!--//.SUBSCRIBE-->
+                            </div> <!--//.SUBSCR
+                            IBE-->
                         </div>
                     </div> <!--//ROW-->
                 </div> <!--//container-->

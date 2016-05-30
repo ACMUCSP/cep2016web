@@ -443,6 +443,10 @@ iframe {
     background-size: cover;
     color: #fff;
 }
+
+#contacto .cbx-heading h1, #contacto .cbx-heading h2 {
+    color: #fff;
+}
 #cbx-register .cbx-inner {
     background: rgba(52, 61, 71, .8);
     padding-bottom: 9rem;
@@ -1002,7 +1006,7 @@ iframe {
 .cbx-subscriber {
     margin-top: 15px;
 }
-.cbx-subscriber input, .cbx-subscriber select {
+.cbx-subscriber input, .cbx-subscriber select{
     border: 1px solid #DC4E41;
     background: #666;
     height: 45px;
@@ -1012,6 +1016,36 @@ iframe {
     margin: 0 auto;
 }
 
+.cbx-subscriber textarea{
+    border: 1px solid #DC4E41;
+    background: #666;
+    height: 200px;
+    border-radius: 4px;
+    color: #fff!important;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.cbx-subscriber p{
+    color:#FAF0E6;
+    font-family: Serif ;
+    font-size: 25px;
+    /*font-variant: small-caps;*/
+    text-shadow: 1px 1px #32CD32;
+
+}
+.cbx-subscriber footer{
+    font-family: Impact;
+    font-size: 20px;
+    color: #32CD32;
+}
+
+.cbx-subscriber li {
+    font-family: Serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #33ccff;
+}
 .cbx-subscriber button {
     background: #DC4E41;
     color: #fff;
