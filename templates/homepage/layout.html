@@ -135,11 +135,12 @@
                                     <ul class="nav navbar-nav cbx-nav-right xs-text-center">
                                         <li><a href="#cbx-speakers" class="gotome">Inicio</a></li>
                                         <li><a href="#cbx-venue" class="gotome">Nosotros</a></li>
-                                        <li><a href="#cbx-subscriber" class="gotome">Registro</a></li>
+                                        <li><a href="#cbx-schedule" class="gotome">Etapas</a></li>
                                         <li><a href="#cbx-sponsored" class="gotome">Sponsors</a></li>
-                                        <li><a href="#cbx-sponsored" class="gotome">Ubicación</a></li>
+                                        <li><a href="#cbx-register" class="gotome">Registro</a></li>
+                                        <li><a href="#cbx-testimonials" class="gotome">Testimonios</a></li>
+                                        <!--<li><a href="#cbx-sponsored" class="gotome">Ubicación</a></li>-->
                                         <li><a href="#contacto" class="gotome">Contacto</a></li>
-                                        <li><a href="{% url 'contact' %}" class="gotome">Archivo</a></li>
                                     </ul>
                                     <ul class="list-inline pull-right event-ticket">
                                         <li><a href="#cbx-register">APRENDE AQUI</a></li>
@@ -174,15 +175,15 @@
                                 {% if form2 %}
                                 <form class="subscribe-form" role="form" method="post" action="{% url "contact" %}">{% csrf_token %}
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <blockquote><strong class="text-muted">.{{ form2.name.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{ form2.name.errors}}</strong>
                                         {{ form2.name|attr:"placeholder:Nombre"|add_class:"form-control lz-input form-control"|attr:"required=required"}}
                                     </div>
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <blockquote><strong class="text-muted">.{{ form2.email.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{ form2.email.errors}}</strong>
                                         {{ form2.email|attr:"placeholder:Ingresa tu email ..."|add_class:"form-control lz-input form-control"|attr:"required=required"}}
                                     </div>
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
-                                        <blockquote><strong class="text-muted">.{{ form2.name.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{ form2.name.errors}}</strong>
                                         {{ form2.message|attr:"placeholder:Escribe tu mensaje ..."|add_class:"form-control lz-input form-control"|attr:"required=required"}}
                                     </div>
                                     <!--<div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".3s">
@@ -217,7 +218,7 @@
                     <div class="footer-content">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 text-center">
-                                <div class="footer-social wow zoomIn" data-wow-delay=".5s">
+                                <!--<div class="footer-social wow zoomIn" data-wow-delay=".5s">
                                     <ul class="list-unstyled list-inline text-center">
                                         <li><a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -226,8 +227,8 @@
                                         <li><a class="sp-" href="#"><i class="fa fa-soundcloud"></i></a></li>
                                         <li><a class="sp-" href="#"><i class="fa fa-video-camera"></i></a></li>
                                     </ul>
-                                </div>
-                                <p class="cbx-copy-right uppercase wow fadeInUp" data-wow-delay=".6s"><span class="span-color2 cbx-copy-symbol">&copy;</span> Copyright 2016. <span class="span-color2">Themeboxr.com. </span>All Right Reserved.</p>
+                                </div>-->
+                                <p class="cbx-copy-right uppercase wow fadeInUp" data-wow-delay=".6s">Concurso Escolar <span class="span-color2">de programación </span>2016.</p>
                             </div>
                         </div>
                     </div>
@@ -235,7 +236,7 @@
                 <div class="cbx-top text-center">
                     <a href="#cbx-header" class="gotome">
                         <i class="fa fa-angle-double-up"></i>
-                        <p>Top</p>
+                        <p>Subir</p>
                     </a>
                 </div>
             </div> <!--//.cbx-inner-->

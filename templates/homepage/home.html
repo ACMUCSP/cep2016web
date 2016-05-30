@@ -391,8 +391,8 @@
 
     <!--REGISTER START-->
     <section>
-        <div id="cbx-subscriber" class="cbx-subscriber">
-            <div class="cbx-testi-inner">
+        <div id="cbx-register" class="cbx-register">
+            <div class="cbx-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-center">
@@ -404,25 +404,25 @@
                             <div class="cbx-subscriber text-center">
                                 {{ form.non_field_errors }}
                                 {% if form %}
-                                <form class="subscribe-form" role="form" method="post" action="#cbx-subscriber">{% csrf_token %}<!--como para hacer scroll-->
+                                <form class="subscribe-form" role="form" method="post" action="#cbx-register">{% csrf_token %}<!--como para hacer scroll-->
                                     <div class="form-group">
-                                        <blockquote><strong class="text-muted">.{{form.name.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{form.name.errors}}</strong>
                                         {{ form.name|attr:"placeholder:Name"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">                                        {{ form.dni.errors }}
-                                        <blockquote><strong class="text-muted">.{{form.last_name.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{form.last_name.errors}}</strong>
                                         {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
-                                        <blockquote><strong class="text-muted">.{{form.dni.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{form.dni.errors}}</strong>
                                         {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
-                                        <blockquote><strong class="text-muted">.{{form.school_name.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{form.school_name.errors}}</strong>
                                         {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
-                                        <blockquote><strong class="text-muted">.{{form.email.errors}}</strong></blockquote>
+                                        <strong class="text-muted">{{form.email.errors}}</strong>
                                         {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
                                     </div>
 

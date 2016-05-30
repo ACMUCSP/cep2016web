@@ -955,10 +955,10 @@ iframe {
     color: #fff;
     margin-bottom: 15px;
 }
-#contacto .cbx-subscriber {
+.cbx-subscriber {
     margin-top: 15px;
 }
- #contacto .cbx-subscriber input {
+.cbx-subscriber input {
     border: 1px solid #DC4E41;
     background: #666;
     height: 45px;
@@ -967,7 +967,7 @@ iframe {
     max-width: 70%;
     margin: 0 auto;
 }
- #contacto .cbx-subscriber button {
+.cbx-subscriber button {
     background: #DC4E41;
     color: #fff;
     border: 0;
@@ -977,7 +977,7 @@ iframe {
     -webkit-transition: all .2 ease;
     transition: all .9s linear;
 }
- #contacto .cbx-subscriber button:hover {
+.cbx-subscriber button:hover {
     background: #8ac329;
 }
  #contacto .form-control:focus {
@@ -999,10 +999,10 @@ iframe {
     color: #fff;
     margin-bottom: 15px;
 }
-#contacto .cbx-subscriber {
+.cbx-subscriber {
     margin-top: 15px;
 }
- #contacto .cbx-subscriber input {
+.cbx-subscriber input, .cbx-subscriber select {
     border: 1px solid #DC4E41;
     background: #666;
     height: 45px;
@@ -1011,7 +1011,8 @@ iframe {
     max-width: 70%;
     margin: 0 auto;
 }
- #contacto .cbx-subscriber button {
+
+.cbx-subscriber button {
     background: #DC4E41;
     color: #fff;
     border: 0;
@@ -1021,7 +1022,7 @@ iframe {
     -webkit-transition: all .2 ease;
     transition: all .9s linear;
 }
- #contacto .cbx-subscriber button:hover {
+.cbx-subscriber button:hover {
     background: #8ac329;
 }
  #contacto .form-control:focus {
@@ -2013,4 +2014,9 @@ html {
   padding-top: 1em !important;
   background: #666 !important;
   color:#FFF !important;
+}
+
+/*ediciones comienzan aqui*/
+#cbx-subscriber{
+    padding-top: 200px;
 }

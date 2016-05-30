@@ -9,7 +9,8 @@ def index(request):
         form = RegistrationForm (request.POST)#haciendo post del form
         if form.is_valid():
             form.save()
-            return render(request,'homepage/home.html', {'msg': form.data['name']+' hemos registrado tus datos con exito'})#el html regresa con el mensaje de exito
+            return render(request,'homepage/home.html', {'msg':
+                form.data['name']+' hemos registrado tus datos con exito','form2':form2})#el html regresa con el mensaje de exito
     else:
         form = RegistrationForm()
     return render(request, 'homepage/home.html', {'form': form, 'form2': form2})

@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
         return regex.test(email);
     }
 
+    /*
     $('form.subscribe-form').on( 'submit', function (evnt) {
         evnt.preventDefault();
         console.log('subs submit');
@@ -71,6 +72,7 @@ jQuery(document).ready(function($){
             return false;
         }
     });
+    */
 
     $('form.subscribe-form input#subscribe').on('keyup', function (evnt) {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -87,6 +89,7 @@ jQuery(document).ready(function($){
      *** Start Contact Form Validation And Ajax Submission
      *********************************************/
 
+    /*
     var $contactForm = $( 'form.cbx-contactform' );
 
     $contactForm.validate({
@@ -147,6 +150,7 @@ jQuery(document).ready(function($){
             }
         }
     });
+    */
 
     /********************************************
      *** End Contact Form Validation And Ajax Submission
