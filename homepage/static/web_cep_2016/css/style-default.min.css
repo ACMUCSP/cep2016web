@@ -165,7 +165,7 @@ iframe {
     background: #DC4E41;
 }
 #cbx-header {
-    background: url(../img/header-bg.jpg) center center no-repeat fixed;
+    background: url(http://cs.ucsp.edu.pe/cep2015/img/background.jpg) center center no-repeat fixed;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -436,7 +436,7 @@ iframe {
     clear: both;
 }
 #cbx-register {
-    background: url(../img/header-bg.jpg) center center no-repeat fixed;
+    background: url(http://cs.ucsp.edu.pe/cep2015/img/background.jpg) center center no-repeat fixed;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
