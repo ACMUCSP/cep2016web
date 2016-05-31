@@ -321,13 +321,13 @@ jQuery(document).ready(function($){
     // COUNTDOWN START
 
     //get the values from data attributes
-    var cbxcountdown = $('#cbxcountdown');
+
 
     // -------------------------------------------------------------
     if ( $('.lz-circular-countdown-container').length ) {
         $('.lz-circular-countdown-container').final_countdown({
             now: Date.now()/1000,
-            end: new Date(2016, 11, 19).getTime()/1000,
+            end: new Date(2016, 10, 20).getTime()/1000,
             selectors: {
                 value_seconds: '.lz-circular-clock-seconds .lz-circular-val',
                 canvas_seconds: 'lz-circular-canvas_seconds',

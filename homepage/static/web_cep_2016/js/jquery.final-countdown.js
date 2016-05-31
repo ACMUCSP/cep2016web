@@ -94,12 +94,22 @@
     }
 
     function dispatchTimer() {
-        timer = {
-            total: Math.floor((settings.end - settings.start) / 86400),
-            days: Math.floor((settings.end - settings.now ) / 86400),
-            hours: 24 - Math.floor(((settings.end - settings.now) % 86400) / 3600),
-            minutes: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) / 60),
-            seconds: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) % 60 )
+        if (settings.end < settings.start) {
+            timer = {
+                total: 0,
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0
+            };
+        } else {
+            timer = {
+                total: Math.floor((settings.end - settings.start) / 86400),
+                days: Math.floor((settings.end - settings.now ) / 86400),
+                hours: 24 - Math.floor(((settings.end - settings.now) % 86400) / 3600),
+                minutes: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) / 60),
+                seconds: 60 - Math.floor((((settings.end - settings.now) % 86400) % 3600) % 60)
+            };
         }
     }
 
