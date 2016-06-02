@@ -4,3 +4,6 @@ cep_2016_oui
 db.sqlite3
 .DS_Store
 .idea
+/env
+web_cep_2016/local_settings.py
+/static
