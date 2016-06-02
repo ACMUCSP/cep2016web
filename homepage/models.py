@@ -30,7 +30,7 @@ class Contact(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)#parametro que activa el date time en el momento de la creacion del objeto
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200,
-                             validators=[RegexValidator(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")])
+                             validators=[RegexValidator(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",'Ingrese un email válido')])
     message = models.TextField()
 
     def __str__(self):#representacion en string del objeto
