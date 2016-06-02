@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = '0upw4z3!yglw3729c53=xdv9*e&o(468-h!vd_pnx!oaw4$bw8'
+SECRET_KEY = 'this_is_not_secret'
 
 DEBUG = True
 
@@ -90,3 +90,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+try:
+    from .local_settings import *
+except ImportError as exc:
+    raise
