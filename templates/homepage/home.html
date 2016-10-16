@@ -276,7 +276,7 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                                           03
                                         </span>
                                     </span>
-                                    <span class="title">Sponsors</span>
+                                    <span class="title">Colaboradores</span>
                                 </h2>
                                 <p class="heading-text-p wow fadeInUp" data-wow-delay=".2s">
                                     Nuestros Sponsors y Colaboradores, los cuales estan comprometidos con la educación
@@ -291,33 +291,39 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                                 <h4 class="uppercase"><span class="span-ash-light">Silver</span> <span class="span-light">Sponsors</span></h4>
                             </div> -->
                             <div class="row">
-                                <div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-2">
+                                <div class="col-xs-5 col-sm-5">
                                     {% load staticfiles %}
                                     <div class="single-sponsored">
-                                        <img src="{% static "web_cep_2016/img/ucsp.png"%}" alt="sponsor1"/>
+                                      <a href="http://ucsp.edu.pe">
+                                        <img src="{% static "web_cep_2016/img/ucsp.png"%}" alt="UCSP"/>
+                                      </a>
                                     </div>
                                 </div>
-                    <!--            <div class="col-xs-6 col-sm-3">
+                                <div class="col-xs-5 col-xs-offset-2 col-sm-5 col-sm-offset-2">
                                     {% load staticfiles %}
                                     <div class="single-sponsored">
-                                        <img src="{% static "web_cep_2016/img/amigocloud.png"%}" alt="sponsor2"/>
+                                      <a href="https://www.amigocloud.com">
+                                        <img src="{% static "web_cep_2016/img/amigocloud.png"%}" alt="AmigoCloud"/>
+                                      </a>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-sm-3">
+                                <div class="col-xs-5 col-sm-5">
+                                  {% load staticfiles %}
+                                  <div class="single-sponsored">
+                                    <a href="https://omegaup.com">
+                                      <img src="{% static "web_cep_2016/img/omegaup.png"%}" alt="OmegaUp"/>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="col-xs-5 col-xs-offset-2 col-sm-5 col-sm-offset-2">
                                     {% load staticfiles %}
                                     <div class="single-sponsored">
-                                        <img src="{% static "web_cep_2016/img/amigocloud.png"%}" alt="sponsor3"/>
-                                    </div>
-                                </div> -->
-                                <div class="col-xs-3 col-sm-2 ">
-                                    {% load staticfiles %}
-                                    <div class="single-sponsored">
-                                        <img src="{% static "web_cep_2016/img/acm_logo.png"%}" alt="sponsor4"/>
+                                      <a href="https://fb.com/ACMUCSP">
+                                        <img src="{% static "web_cep_2016/img/acm_logo.png"%}" alt="ACMUCSP"/>
+                                      </a>
                                     </div>
                                 </div>
                             </div>
-                        </div> <!--//col-->
-                    </div> <!--//row-->
 
       <!--              <div class="row">
                         <div class="col-xs-12">
@@ -413,6 +419,9 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                         <div class="col-xs-12 text-center">
                             <p>Inicio de inscripciones: Lunes 16 de Octubre</p>
                             <p>Fin de inscripciones: Domingo 6 de Noviembre</p>
+                            <p><strong>NOTA:</strong> Necesitas
+                              <a target="_blank" href="https://omegaup.com/login/#reg_username">crear un perfil en OmegaUP</a>
+                            antes de registrarte. Usaremos esa plataforma para el concurso.</p>
                         </div> <!--//main COL-->
                     </div> <!--// row-->
                     <div class="row">
@@ -434,17 +443,24 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                                         {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
+                                      <strong class="text-muted">{{form.email.errors}}</strong>
+                                      {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
+                                    </div>
+                                    <div class="form-group">
                                         <strong class="text-muted">{{form.school_name.errors}}</strong>
                                         {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
-                                        <strong class="text-muted">{{form.email.errors}}</strong>
-                                        {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
-                                    </div>
-
-                                    <div class="form-group">
                                         {{ form.year_in_school.errors}}
                                         {{ form.year_in_school|add_class:"form-control"}}
+                                    </div>
+                                    <div class="form-group">
+                                      {{ form.site.errors}}
+                                      {{ form.site|add_class:"form-control"}}
+                                    </div>
+                                    <div class="form-group">
+                                      {{ form.omegaup_username.errors}}
+                                      {{ form.omegaup_username|attr:"placeholder:Usuario OmegaUp"|add_class:"form-control"}}
                                     </div>
 
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".4s">
@@ -454,7 +470,7 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                                 {% else %}
                                     <blockquote>
                                         <p class="text-primary">{{ msg }}</p>
-                                        <footer class="text-success">Empieza a codear <cite class="text-success" title="Source Title">tu historia.</cite></footer>
+                                        <footer class="text-success">Empieza a programar <cite class="text-success" title="Source Title">tu historia.</cite></footer>
                                     </blockquote>
                                 {% endif %}
                             </div> <!--//.SUBSCRIBE-->
