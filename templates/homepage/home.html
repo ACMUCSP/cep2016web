@@ -411,8 +411,8 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                             </div>
                         </div>
                         <div class="col-xs-12 text-center">
-                            <p>Inicio de inscripciones: Lunes 5 de septiembre</p>
-                            <p>Fin de inscripciones: Viernes 30 de septiembre</p>
+                            <p>Inicio de inscripciones: Lunes 16 de Octubre</p>
+                            <p>Fin de inscripciones: Domingo 6 de Noviembre</p>
                         </div> <!--//main COL-->
                     </div> <!--// row-->
                     <div class="row">
@@ -423,32 +423,32 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                                 <form class="subscribe-form" role="form" method="post" action="#cbx-register">{% csrf_token %}<!--como para hacer scroll-->
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.name.errors}}</strong>
-                                        {{ form.name|attr:"placeholder:Name"|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.name|attr:"placeholder:Name"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.last_name.errors}}</strong>
-                                        {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.dni.errors}}</strong>
-                                        {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.school_name.errors}}</strong>
-                                        {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
                                     </div>
                                     <div class="form-group">
                                         <strong class="text-muted">{{form.email.errors}}</strong>
-                                        {{ form.email|attr:"placeholder:Email"|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
                                     </div>
 
                                     <div class="form-group">
                                         {{ form.year_in_school.errors}}
-                                        {{ form.year_in_school|add_class:"form-control"|attr:"disabled"}}
+                                        {{ form.year_in_school|add_class:"form-control"}}
                                     </div>
 
                                     <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".4s">
-                                        <button class="cbx-submit lz-submit-btn" name="cbx-submit" type="submit" disabled>Enviar</button>
+                                        <button class="cbx-submit lz-submit-btn" name="cbx-submit" type="submit">Enviar</button>
                                     </div>
                                 </form>
                                 {% else %}
