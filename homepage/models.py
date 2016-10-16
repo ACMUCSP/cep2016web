@@ -40,6 +40,7 @@ class Contact(models.Model):
         r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
         'Ingrese un email válido')])
     message = models.TextField()
+    answered_by = models.ForeignKey('auth.User', blank=True, null=True)
 
     def __str__(self):
         return self.name
