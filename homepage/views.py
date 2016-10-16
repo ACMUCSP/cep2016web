@@ -10,7 +10,9 @@ def index(request):
             form.save()
             return render(
                 request, 'homepage/home.html',
-                {'msg': ('Hola %s, hemos registrado tus datos con éxito' %
+                {'msg': ('Hola %s, hemos registrado tus datos con éxito. '
+                         'Al cierre de las inscripciones, recibirás un '
+                         'email con instrucciones para el concurso.' %
                          form.data['name']),
                  'form2': contact_form})
     else:
