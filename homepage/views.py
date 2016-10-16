@@ -1,27 +1,38 @@
 from django.shortcuts import render
-from .form import RegistrationForm,ContactForm
+from .form import RegistrationForm, ContactForm
 
-# Create your views here.
 
 def index(request):
-    form2 = ContactForm()
+    contact_form = ContactForm()
     if request.method == "POST":
-        form = RegistrationForm (request.POST)#haciendo post del form
+        form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,'homepage/home.html', {'msg':
-                form.data['name']+' hemos registrado tus datos con exito','form2':form2})#el html regresa con el mensaje de exito
+            return render(
+                request, 'homepage/home.html',
+                {'msg': ('Hola %s, hemos registrado tus datos con éxito' %
+                         form.data['name']),
+                 'form2': contact_form})
     else:
         form = RegistrationForm()
-    return render(request, 'homepage/home.html', {'form': form, 'form2': form2})
+    return render(request, 'homepage/home.html', {'form': form,
+                                                  'form2': contact_form})
+
 
 def contact(request):
-    formu = RegistrationForm
+    registration_form = RegistrationForm
     if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request,'homepage/success.html', {'msg2':form.data['name']+', tu mensaje ha sido enviado','form':formu})
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            return render(
+                request, 'homepage/success.html',
+                {'msg2': ('Hola %s, hemos recibido tu mensaje' %
+                          contact_form.data['name']),
+                 'form': registration_form})
     else:
-        form = ContactForm()
-    return render(request, 'homepage/success.html', {'form': formu, 'form2': form})
+        contact_form = ContactForm()
+    return render(
+        request,
+        'homepage/success.html',
+        {'form': registration_form, 'form2': contact_form})
