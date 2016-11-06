@@ -4,8 +4,9 @@ from homepage.models import Register, Contact
 
 class RegisterAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'last_name', 'school_name', 'created_on')
+    list_display = ('name', 'last_name', 'school_name', 'created_on', 'site')
     ordering = ('-created_on',)
+    list_filter = ('site',)
 
 
 class ContactAdmin(admin.ModelAdmin):
