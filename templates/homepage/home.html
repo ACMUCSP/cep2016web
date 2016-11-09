@@ -419,63 +419,9 @@ Asentada entre la costa y la sierra sur del Perú hasta los Andes. Contiene el p
                         <div class="col-xs-12 text-center">
                             <p>Inicio de inscripciones: Lunes 17 de Octubre</p>
                             <p>Fin de inscripciones: Martes 8 de Noviembre</p>
-                            <p><strong>NOTA:</strong> Necesitas
-                              <a target="_blank" href="https://omegaup.com/login/#reg_username">crear un perfil en OmegaUP</a>
-                            antes de registrarte. Usaremos esa plataforma para el concurso.</p>
+                            <p><strong>Las inscripciones han finalizado.</strong></p>
                         </div> <!--//main COL-->
                     </div> <!--// row-->
-                    <div class="row">
-                        <div class="col-xs-12  col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-                            <div class="cbx-subscriber text-center">
-                                {{ form.non_field_errors }}
-                                {% if form %}
-                                <form class="subscribe-form" role="form" method="post" action="#cbx-register">{% csrf_token %}<!--como para hacer scroll-->
-                                    <div class="form-group">
-                                        <strong class="text-muted">{{form.name.errors}}</strong>
-                                        {{ form.name|attr:"placeholder:Name"|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                        <strong class="text-muted">{{form.last_name.errors}}</strong>
-                                        {{ form.last_name|attr:"placeholder:Apellidos"|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                        <strong class="text-muted">{{form.dni.errors}}</strong>
-                                        {{ form.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                      <strong class="text-muted">{{form.email.errors}}</strong>
-                                      {{ form.email|attr:"placeholder:Email"|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                        <strong class="text-muted">{{form.school_name.errors}}</strong>
-                                        {{ form.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                        {{ form.year_in_school.errors}}
-                                        {{ form.year_in_school|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                      {{ form.site.errors}}
-                                      {{ form.site|add_class:"form-control"}}
-                                    </div>
-                                    <div class="form-group">
-                                      {{ form.omegaup_username.errors}}
-                                      {{ form.omegaup_username|attr:"placeholder:Usuario OmegaUp"|add_class:"form-control"}}
-                                    </div>
-
-                                    <div class="form-group xs-text-center  wow zoomIn" data-wow-delay=".4s">
-                                        <button class="cbx-submit lz-submit-btn" name="cbx-submit" type="submit">Enviar</button>
-                                    </div>
-                                </form>
-                                {% else %}
-                                    <blockquote>
-                                        <p class="text-primary">{{ msg }}</p>
-                                        <footer class="text-success">Empieza a programar <cite class="text-success" title="Source Title">tu historia.</cite></footer>
-                                    </blockquote>
-                                {% endif %}
-                            </div> <!--//.SUBSCRIBE-->
-                        </div>
-                    </div> <!--//ROW-->
                 </div> <!--//container-->
             </div> <!--//cbx-inner-->
         </div>
